@@ -1,13 +1,18 @@
 /*
  Theme Name:   Planty
- Theme URI:    https://openclassrooms.com/
- Description:  Thème Planty basé sur le thème Twenty Twenty
+ Description:  Thème Planty basé sur le thème BlankSlate
  Author:       --
- Author URI:   https://openclassrooms.com/
- Template:     twentytwenty
+ Template:     blankslate
  Version:      1.0.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         site vitrine, boissons, plantes
  Text Domain:  planty-oc
 */
+
+/* HEADER */
+
+.logo-planty {
+    height: 20px;
+    width: auto;
+}
