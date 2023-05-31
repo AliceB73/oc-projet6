@@ -10,9 +10,64 @@
  Text Domain:  planty-oc
 */
 
+/* BODY */
+
+body {
+    background-color: #ECE2DA;
+}
+
 /* HEADER */
 
 .logo-planty {
     height: 20px;
     width: auto;
+    margin: 30px 0 30px 40px;
+}
+
+.header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content:space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+    margin: 30px;
+}
+
+.navbar a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#menu-item-22 a {
+    background-color: #DC9F96;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 30px;
+}
+
+#menu-item-22:hover {
+    background-color: #C02E44;
+}
+
+/* FOOTER */
+
+#mentions-legales {
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+}
+
+#mentions-legales a {
+    color: #000000;
+    text-decoration: none;
+    margin: 20px 0 20px 0;
 }
