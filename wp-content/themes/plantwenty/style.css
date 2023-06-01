@@ -1,0 +1,87 @@
+/*
+ Theme Name:   Plantwenty
+ Description:  Thème Planty basé sur le thème Twenty Twenty
+ Author:       --
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         site vitrine, boissons, plantes
+ Text Domain:  planty-oc
+*/
+
+
+/* BODY */
+
+body {
+    background-color: #E5E5E5;
+    font-family: inherit;
+}
+
+/* HEADER */
+
+.logo-planty {
+    height: 20px;
+    width: auto;
+    margin: 30px 0 30px 40px;
+}
+
+.header {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    height: 80px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin: 20px 0;
+    list-style: none;
+    font-family: 'Syne', sans-serif;
+}
+
+.navigation a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#menu-item-22 a {
+    background-color: #DC9F96;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 30px;
+}
+
+#menu-item-22:hover {
+    background-color: #C02E44;
+}
+
+/* FOOTER */
+
+#mentions-legales {
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+}
+
+#mentions-legales a {
+    color: #000000;
+    text-decoration: none;
+    margin: 20px 0 20px 0;
+    font-family: 'Syne', sans-serif;
+}
+
+/* MAIN */
+
+#site-content h1, #site-content h2, #site-content h3, #site-content p{
+    font-family: 'Syne', sans-serif;
+}
