@@ -12,9 +12,7 @@
 
 
 /* BODY */
-* {
-    max-width: 1440px;
-}
+
 body {
     background-color: #ECE2DA;
     font-family: inherit;
@@ -55,6 +53,8 @@ body {
     font-weight: 400;
 }
 
+
+
 #menu-item-22 a {
     background-color: #DC9F96;
     color: #ffffff;
@@ -64,6 +64,11 @@ body {
 
 #menu-item-22:hover {
     background-color: #C02E44;
+}
+
+.navigation #menu-item-20:hover {
+    font-size: 13px;
+    font-weight: 700;
 }
 
 /* FOOTER */
@@ -88,19 +93,153 @@ body {
     font-family: 'Syne', sans-serif;
 }
 
+#site-content h1 {
+    max-width: 781px;
+}
+
 /* SECTION GOÛTS */
 
-#site-content h3 {
+#site-content h2 {
     font-weight: 800;
+    font-size: 30px;
 }
 
 .section-gouts .column-gout .img-gout {
-    height: 293px;
-    width: 262px;
+    height: 262px;
+    width: 393px;
+}
+
+.section-gouts {
+	max-width: 816px!important;
 }
 
 /* CALL TO ACTION */
 
-.is-style-fill .cta-commander {
-    text-transform:lowercase;
+.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link {
+    text-transform: none;
+    font-size: 15px;
+    height: 55px;
+    width: 198px;
+    font-family: 'Syne', sans-serif;
+}
+
+.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link:hover {
+    background-color: #C02E44;
+}
+
+.section-gouts .wp-block-cover .wp-block-cover__inner-container {
+    width: 350px;
+}
+
+/* NOUS RENCONTRER */
+
+.wp-block-image .wp-image-92 {
+    position: absolute;
+    left: 143px;
+    top: 151px;
+}
+
+.wp-block-image .wp-image-97 {
+    position: absolute;
+    top: 359px;
+    z-index: 10;
+}
+
+.wp-block-image .wp-image-103 {
+    position: absolute;
+    top: 1532px;
+    z-index: -10;
+}
+
+#submit-btn, #submit-commande {
+    cursor: pointer;
+}
+
+#submit-commande:hover {
+    background-color: #C02E44;
+}
+
+/* IMAGE FOOTER */
+
+
+/* FORMULAIRE DE CONTACT */
+
+.wpcf7-form label {
+    font-size: 20px;
+}
+
+#nom, #email, #message, .order-form input {
+    border-radius: 7px;
+    width: 383px;
+    height: 70px;
+}
+
+#message {
+    resize: none;
+    height: 237px;
+}
+
+#submit-btn, #submit-commande {
+    background-color: #E0B9B4;
+    text-transform: none;
+    font-size: 15px;
+    width: 198px;
+    height: 55px;
+    border-radius: 7px;
+    margin-top: 24px;
+}
+
+#submit-btn {
+    margin-left: calc(50% - 198px/2);
+}
+
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+/* PAGE PRECOMMANDE */
+
+.page-id-17 {
+    background-color: #3B8E46;
+}
+
+.page-id-17 h2 {
+    color:#ffffff;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 90px;
+}
+
+.left-column, .right-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-form h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.order-form label {
+    color:#ffffff;
+}
+
+.order-form input {
+    border-radius: 7px;
+    height: 70px;
+}
+
+#submit-commande {
+    margin-left: calc(50% - 580px/2);
 }

@@ -16,7 +16,7 @@
     <div id="wrapper" class="hfeed">
         <header id="header" role="banner">
             <div class="header">
-                <a href="<?php echo site_url() ?>">
+                <a href="#">
                     <img src="http://localhost/planty/wp-content/uploads/2023/05/Logo.png" class="logo-planty">
                 </a>
                 <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
