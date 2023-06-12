@@ -15,3 +15,6 @@ function montheme_supports()
 }
 
 add_action('after_setup_theme', 'montheme_supports');
+
+// Désactivation de l'ajout automatique des balise p et br par Contact Form 7
+add_filter('wpcf7_autop_or_not', '__return_false');

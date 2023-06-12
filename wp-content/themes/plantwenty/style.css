@@ -18,6 +18,11 @@ body {
     font-family: inherit;
 }
 
+body .is-layout-flex > * {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /* HEADER */
 
 .logo-planty {
@@ -53,8 +58,6 @@ body {
     font-weight: 400;
 }
 
-
-
 #menu-item-22 a {
     background-color: #DC9F96;
     color: #ffffff;
@@ -62,11 +65,11 @@ body {
     padding: 30px;
 }
 
-#menu-item-22:hover {
+#menu-item-22 a:hover {
     background-color: #C02E44;
 }
 
-.navigation #menu-item-20:hover {
+.navigation #menu-item-20 a:hover {
     font-size: 13px;
     font-weight: 700;
 }
@@ -85,6 +88,29 @@ body {
     text-decoration: none;
     margin: 20px 0 20px 0;
     font-family: 'Syne', sans-serif;
+}
+
+/* IMAGE FOOTER */
+
+@media (min-width: 320px) and (max-width: 2000px) {
+.entry-content > .alignwide:not(.wp-block-group.has-background), .entry-content > .alignfull:not(.wp-block-group.has-background) {
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 2000px) {
+.wp-block-cover-image .wp-block-cover__inner-container, .wp-block-cover .wp-block-cover__inner-container {
+    width: 100%;
+    }
+}
+
+.wp-block-cover, .wp-block-cover-image {
+    padding: 0;
+}
+
+.wp-image-44 {
+    margin-top: 10%;
 }
 
 /* MAIN */
@@ -113,6 +139,35 @@ body {
 	max-width: 816px!important;
 }
 
+@media (min-width: 320px) and (max-width: 860px) {
+    #post-25 > div.post-inner > div > div.wp-block-columns.section-gouts.is-layout-flex.wp-container-3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 860px) {
+    .column-gout {
+        margin: 0 auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+    .section-gouts .column-gout .img-gout {
+        min-width: 320px;
+        width: 95%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 /* CALL TO ACTION */
 
 .wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link {
@@ -123,8 +178,9 @@ body {
     font-family: 'Syne', sans-serif;
 }
 
-.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link:hover {
+#submit-btn:hover {
     background-color: #C02E44;
+    text-decoration: none;
 }
 
 .section-gouts .wp-block-cover .wp-block-cover__inner-container {
@@ -133,22 +189,46 @@ body {
 
 /* NOUS RENCONTRER */
 
+#site-content .last-section {
+    margin-top: 100px;
+}
+
 .wp-block-image .wp-image-92 {
     position: absolute;
-    left: 143px;
+    left: 10%;
     top: 151px;
+    z-index: -10;
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+    .wp-block-image .wp-image-92 {
+        display: none;
+        overflow: hidden;
+    }
 }
 
 .wp-block-image .wp-image-97 {
     position: absolute;
-    top: 359px;
-    z-index: 10;
+    right: 2%;
+    top: 315px;
+    z-index: 0;
 }
 
+@media (min-width: 320px) and (max-width: 780px) {
+    .wp-block-image .wp-image-97 {
+        display: none; 
+    }
+}
 .wp-block-image .wp-image-103 {
     position: absolute;
-    top: 1532px;
+    top: 1692px;
     z-index: -10;
+}
+
+@media (min-width: 320px) and (max-width: 780px) {
+    .wp-block-image .wp-image-103 {
+        display: none; 
+    }
 }
 
 #submit-btn, #submit-commande {
@@ -157,10 +237,34 @@ body {
 
 #submit-commande:hover {
     background-color: #C02E44;
+    text-decoration: none;
 }
 
-/* IMAGE FOOTER */
+#site-content .titre-l-equipe {
+    margin-top: 5%;
+    margin-bottom: 0;
+}
 
+.wp-container-6.wp-container-6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 815px;
+    z-index: 5;
+    
+}
+
+.wp-container-7.wp-container-7 {
+    background-color: #ffffff;
+}
+
+.wp-image-93 {
+    height: 554px!important;
+}
+
+.p-nous-rencontrer {
+    margin: -100px;
+}
 
 /* FORMULAIRE DE CONTACT */
 
@@ -190,7 +294,8 @@ body {
 }
 
 #submit-btn {
-    margin-left: calc(50% - 198px/2);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wpcf7-form {
@@ -201,6 +306,7 @@ body {
     flex-wrap: wrap;
     gap: 0px;
 }
+
 
 /* PAGE PRECOMMANDE */
 
@@ -215,14 +321,43 @@ body {
 .order-form {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     width: 100%;
     gap: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .order-form {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 20px
+    }
+    #divider {
+        display: none;
+    }
+    .left-column, .right-column {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+    }
 }
 
 .left-column, .right-column {
     width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+#divider {
+    border-left: 1px solid #ffffff;
+    width: 0px;
+    margin-top: 55px;
 }
 
 .order-form h3 {
@@ -241,5 +376,96 @@ body {
 }
 
 #submit-commande {
-    margin-left: calc(50% - 580px/2);
+    margin: 44px auto 97px auto;
+}
+
+.choix-gout {
+    border-top: 1px solid #ffffff;
+    padding-top: 40px;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* FORMULAIRE DE COMMANDE */
+
+.contenant-gouts {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.article-fruit {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-zone {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+}
+
+.number-zone {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-zone {
+    display: flex;
+    flex-direction: column;
+    width: 31px;
+}
+
+#fraise, #framboise, #pamplemousse, #citron {
+    width: 50px;
+    text-align: center;
+}
+
+.form-zone .ok-btn {
+    width: 100px;
+    height: 56px;
+    background-color: #E0B9B4;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form-zone .ok-btn:hover {
+    background-color: #C02E44;
+    text-decoration: none;
+}
+
+.number-zone input {
+    border: none;
+    border-radius: 5px 0 0 5px;
+    height: 54px;
+    font-size: 16px;
+}
+
+.button-zone .plus-btn, .button-zone .moins-btn {
+    background-color: #DC9F96;
+    color: #ffffff;
+    height: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.form-zone .ok-btn, .form-zone .plus-btn, .form-zone .moins-btn {
+    border: none;
+}
+
+.button-zone .plus-btn{
+    border-radius: 0 5px 0 0;
+    border-bottom: solid 1px #ffffff;
+}
+
+.button-zone .moins-btn {
+    border-radius: 0 0 5px 0;
+}
+
+.button-zone .moins-btn:hover, .button-zone .plus-btn:hover {
+    text-decoration: none;
 }
