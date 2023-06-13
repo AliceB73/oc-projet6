@@ -58,6 +58,23 @@ body .is-layout-flex > * {
     font-weight: 400;
 }
 
+#menu #adminId {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#menu #adminId:hover {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#menu li {
+    list-style: none;
+    
+}
+
 #menu-item-22 a {
     background-color: #DC9F96;
     color: #ffffff;
@@ -72,6 +89,12 @@ body .is-layout-flex > * {
 .navigation #menu-item-20 a:hover {
     font-size: 13px;
     font-weight: 700;
+}
+
+.header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
 
 /* FOOTER */
@@ -178,8 +201,8 @@ body .is-layout-flex > * {
     font-family: 'Syne', sans-serif;
 }
 
-#submit-btn:hover {
-    background-color: #C02E44;
+.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link:hover {
+    background-color: #C02E44!important;
     text-decoration: none;
 }
 
