@@ -8,27 +8,18 @@ function theme_enqueue_styles()
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
 }
 
-function montheme_supports()
+function plantwenty_supports()
 {
     register_nav_menu('header', 'En tête du menu');
     register_nav_menu('footer', 'Pied de page');
 }
 
-add_action('after_setup_theme', 'montheme_supports');
+add_action('after_setup_theme', 'plantwenty_supports');
 
 // Désactivation de l'ajout automatique des balise p et br par Contact Form 7
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 // Ajout du lien d'administration lorsque l'utilisateur est connecté
-
-/*function plantwenty_admin_link($items, $args)
-{
-    if (is_user_logged_in()) {
-        echo '<li><a href="' . get_admin_url() . '" id="adminId">Admin</a></li>';
-    }
-    return $items;
-}*/
-
 function plantwenty_admin_link($items, $args)
 {
     // on vérifie si l'utilisateur est connecté
@@ -40,7 +31,7 @@ function plantwenty_admin_link($items, $args)
         // on divise $items avec preg_split() qu'on stock dans un tableau
         $array_nav = preg_split('/<\/li>/', $items);
 
-        // on insère $admin_nav_link à l'index 1 dans le tableau
+        // on insère $admin_nav_link à l'index 1 dans le tableau $array_nav
         array_splice($array_nav, 1, 0, array($admin_nav_link));
 
         // on convertit le tableau en HTML avec implode()

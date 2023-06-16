@@ -19,6 +19,7 @@
                 <a href="<?php echo site_url() ?>">
                     <img src="http://localhost/planty/wp-content/uploads/2023/05/Logo.png" class="logo-planty">
                 </a>
+                <label class="nav-menu-responsive">☰</label>
                 <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
                     <?php wp_nav_menu(array(
                         'theme_location' => 'header',

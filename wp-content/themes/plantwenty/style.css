@@ -97,6 +97,21 @@ body .is-layout-flex > * {
     align-items: baseline;
 }
 
+.nav-menu-responsive {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 770px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #ffffff;
+        justify-content: center;
+        }
+    }
+
 /* FOOTER */
 
 #mentions-legales {
@@ -146,6 +161,37 @@ body .is-layout-flex > * {
     max-width: 781px;
 }
 
+#site-content .entry-content .titre-accueil {
+    font-size: 38px;
+}
+
+@media (min-width: 320px) and (max-width: 520px) {
+    #site-content .entry-content .titre-accueil {
+        font-size: 22px; 
+    }
+}
+
+.canette-planty {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.curved-section {
+    background-color: #ffffff;
+    background-image: url(http://localhost/planty/wp-content/uploads/2023/06/sepration-block.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: 415px;
+    padding-top: 120px;
+}
+
+#site-content .curved-section h2 {
+    font-weight: 700;
+    margin-bottom: 47px;
+}
+
 /* SECTION GOÛTS */
 
 #site-content h2 {
@@ -183,9 +229,7 @@ body .is-layout-flex > * {
 
 @media (min-width: 320px) and (max-width: 450px) {
     .section-gouts .column-gout .img-gout {
-        min-width: 320px;
-        width: 95%;
-        height: auto;
+        width: 300px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -216,41 +260,50 @@ body .is-layout-flex > * {
     margin-top: 100px;
 }
 
-.wp-block-image .wp-image-92 {
-    position: absolute;
-    left: 10%;
-    top: 151px;
-    z-index: -10;
+#site-content .section-nous-rencontrer .titre-nous-rencontrer {
+    font-size: 38px;
 }
 
-@media (min-width: 320px) and (max-width: 700px) {
-    .wp-block-image .wp-image-92 {
-        display: none;
-        overflow: hidden;
+@media (min-width: 320px) and (max-width: 510px) {
+    #site-content .section-nous-rencontrer .titre-nous-rencontrer {
+        font-size: 22px; 
     }
 }
 
-.wp-block-image .wp-image-97 {
-    position: absolute;
-    right: 2%;
-    top: 315px;
-    z-index: 0;
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 100%;
+    width: calc(100% - 4rem);
 }
 
-@media (min-width: 320px) and (max-width: 780px) {
-    .wp-block-image .wp-image-97 {
-        display: none; 
+.entry-content .wp-block-group .p-nous-rencontrer {
+    max-width: 70%;
+}
+
+.wp-container-2 {
+    background-image: url("http://localhost/planty/wp-content/uploads/2023/06/Group-2.png");
+    background-position: 5% 5%;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .wp-container-2 {
+        background-position: 50% 0%; 
+    }
+    .titre-nous-rencontrer {
+        margin-top: 20px;
     }
 }
-.wp-block-image .wp-image-103 {
-    position: absolute;
-    top: 1692px;
-    z-index: -10;
+
+.wp-block-cover__inner-container .wp-container-8 .wp-container-7 {
+    background-image: url("http://localhost/planty/wp-content/uploads/2023/06/Group-4.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 554px;
 }
 
-@media (min-width: 320px) and (max-width: 780px) {
-    .wp-block-image .wp-image-103 {
-        display: none; 
+@media (min-width: 320px) and (max-width: 560px) {
+    .wp-block-cover__inner-container .wp-container-8 .wp-container-7 {
+        background-image: none;
     }
 }
 
@@ -264,8 +317,8 @@ body .is-layout-flex > * {
 }
 
 #site-content .titre-l-equipe {
-    margin-top: 5%;
-    margin-bottom: 0;
+    margin-top: 120px;
+    margin-bottom: 50px;
 }
 
 .wp-container-6.wp-container-6 {
@@ -274,7 +327,6 @@ body .is-layout-flex > * {
     justify-content: space-around;
     width: 815px;
     z-index: 5;
-    
 }
 
 .wp-container-7.wp-container-7 {
@@ -293,6 +345,10 @@ body .is-layout-flex > * {
 
 .wpcf7-form label {
     font-size: 20px;
+    font-weight: 400;
+    font-family: 'Syne', sans-serif;
+    margin-bottom: 13px;
+    margin-top: 22px;
 }
 
 #nom, #email, #message, .order-form input {
@@ -321,6 +377,22 @@ body .is-layout-flex > * {
     margin-right: auto;
 }
 
+#wpcf7-f100-p15-o1 {
+    z-index: -5;
+    background-image: url("http://localhost/planty/wp-content/uploads/2023/06/Group-16.png");
+    background-position: 0% 97%;
+    background-repeat: no-repeat;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 320px) and (max-width: 620px) {
+    #wpcf7-f100-p15-o1 {
+        background-image: none; 
+    }
+}
+
 .wpcf7-form {
     display: flex;
     flex-direction: column;
@@ -330,6 +402,9 @@ body .is-layout-flex > * {
     gap: 0px;
 }
 
+.wpcf7-form br {
+    display: none;
+}
 
 /* PAGE PRECOMMANDE */
 
@@ -391,6 +466,7 @@ body .is-layout-flex > * {
 
 .order-form label {
     color:#ffffff;
+    margin-top: 30px;
 }
 
 .order-form input {
