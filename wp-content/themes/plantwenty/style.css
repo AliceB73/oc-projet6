@@ -77,6 +77,7 @@ body .is-layout-flex > * {
 
 #menu-item-22 a {
     background-color: #DC9F96;
+    border: #DC9F96 solid 1px;
     color: #ffffff;
     font-weight: 700;
     padding: 30px;
@@ -101,16 +102,42 @@ body .is-layout-flex > * {
     display: none;
 }
 
-@media (min-width: 320px) and (max-width: 770px) {
-    .header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        background-color: #ffffff;
-        justify-content: center;
+@media (min-width: 656px) and (max-width: 765px) {
+    .navigation {
+        gap: 5px;
         }
     }
+
+@media (min-width: 508px) and (max-width: 656px) {
+    .header nav {
+        width: 100%;
+        background-color: #ffffff;
+        padding-bottom: 8px;
+        }
+    .navigation {
+        width: 100%;
+        }
+    .header {
+        justify-content: center;
+        }   
+    }
+
+@media (min-width: 320px) and (max-width: 508px) {
+    .navigation, .header nav {
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        }
+    .header nav {
+        padding-bottom: 8px;
+    }
+    .entry-content {
+        margin-top: 290px;
+        }
+    .header {
+        justify-content: center;
+    }
+     }
 
 /* FOOTER */
 
@@ -125,6 +152,7 @@ body .is-layout-flex > * {
     color: #000000;
     text-decoration: none;
     margin: 20px 0 20px 0;
+    font-size: 16px;
     font-family: 'Syne', sans-serif;
 }
 
@@ -148,7 +176,15 @@ body .is-layout-flex > * {
 }
 
 .wp-image-44 {
-    margin-top: 10%;
+    margin-top: 120px;
+}
+
+.wp-block-cover .wp-block-cover__inner-container {
+    padding-bottom: 0;
+}
+
+#post-15 .wp-image-44 {
+    margin-top: 73px;
 }
 
 /* MAIN */
@@ -163,6 +199,8 @@ body .is-layout-flex > * {
 
 #site-content .entry-content .titre-accueil {
     font-size: 38px;
+    margin-top: 90px;
+    margin-bottom: 100px;
 }
 
 @media (min-width: 320px) and (max-width: 520px) {
@@ -174,6 +212,7 @@ body .is-layout-flex > * {
 .canette-planty {
     margin-left: auto;
     margin-top: auto;
+    margin-bottom: 10px!important;
 }
 
 .curved-section {
@@ -187,9 +226,20 @@ body .is-layout-flex > * {
     padding-top: 120px;
 }
 
+@media (min-width: 320px) and (max-width: 417px) {
+    .curved-section {
+        height: 450px; 
+    }
+}
+
 #site-content .curved-section h2 {
     font-weight: 700;
-    margin-bottom: 47px;
+    margin-bottom: 45px;
+    margin-top: 13px!important;
+}
+
+#site-content .p-energie-des-plantes {
+    line-height: 24px!important;
 }
 
 /* SECTION GOÛTS */
@@ -199,41 +249,80 @@ body .is-layout-flex > * {
     font-size: 30px;
 }
 
+#site-content .titre-gouts {
+    margin-bottom: 7px;
+}
+
+.p-gouts {
+    margin-bottom: 48px!important;
+}
+
 .section-gouts .column-gout .img-gout {
     height: 262px;
     width: 393px;
+    margin: 0!important;
+}
+
+.column-gout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .section-gouts {
 	max-width: 816px!important;
+    gap: 30px;
+    margin-bottom: 47px!important;
 }
 
+.section-gouts .column-gout .framboise {
+    max-width: 240px!important;
+}
 @media (min-width: 320px) and (max-width: 860px) {
     #post-25 > div.post-inner > div > div.wp-block-columns.section-gouts.is-layout-flex.wp-container-3 {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0px;
+        gap: 30px;
     }
 }
 
 @media (min-width: 320px) and (max-width: 860px) {
     .column-gout {
         margin: 0 auto 0 auto;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 0px;
+        align-items: center;
+        gap: 30px;
     }
 }
 
 @media (min-width: 320px) and (max-width: 450px) {
     .section-gouts .column-gout .img-gout {
-        width: 300px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
 }
+
+@media (min-width: 320px) and (max-width: 350px) {
+    .section-gouts .column-gout .txt-gout {
+        font-size: 38px!important;
+    }
+    .section-gouts .column-gout .framboise {
+        width: 200px!important;
+        font-size: 38px!important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 895px) {
+    .section-gouts {
+        display: flex;
+        flex-direction: column;
+        }
+    }
 
 /* CALL TO ACTION */
 
@@ -243,6 +332,7 @@ body .is-layout-flex > * {
     height: 55px;
     width: 198px;
     font-family: 'Syne', sans-serif;
+    font-weight: 400;
 }
 
 .wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link:hover {
@@ -250,18 +340,69 @@ body .is-layout-flex > * {
     text-decoration: none;
 }
 
+.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link:focus {
+    text-decoration: none;
+}
+
 .section-gouts .wp-block-cover .wp-block-cover__inner-container {
     width: 350px;
 }
 
-/* NOUS RENCONTRER */
+/* TESTIMONIAUX */
 
 #site-content .last-section {
-    margin-top: 100px;
+    margin-top: 120px;
 }
+
+.nom-testimoniaux {
+    margin-bottom: 11px!important;
+    margin-top: 20%!important;
+}
+
+.txt-testimoniaux {
+    line-height: 19px!important;
+}
+
+@media (min-width: 780px) and (max-width: 1034px) {
+     .testimonial-block {
+        display: flex;
+        flex-direction: column;
+    }
+    .photo-testimoniaux {
+        margin-bottom: 0px!important;
+    }
+    .nom-testimoniaux {
+        margin-top: 0px!important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 780px) {
+    .txt-testimoniaux br {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 370px) {
+    .testimonial-block {
+       display: flex;
+       flex-direction: column;
+       align-content:baseline;
+   }
+   .photo-testimoniaux {
+       margin-bottom: 0px!important;
+   }
+   .nom-testimoniaux {
+       margin-top: 0px!important;
+       margin-left: 0px!important;
+   }
+}
+
+/* NOUS RENCONTRER */
+
 
 #site-content .section-nous-rencontrer .titre-nous-rencontrer {
     font-size: 38px;
+    margin-bottom: 18px;
 }
 
 @media (min-width: 320px) and (max-width: 510px) {
@@ -276,7 +417,13 @@ body .is-layout-flex > * {
 }
 
 .entry-content .wp-block-group .p-nous-rencontrer {
-    max-width: 70%;
+    max-width: 670px;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.entry-content .section-nous-rencontrer {
+    margin-bottom: 0!important;
 }
 
 .wp-container-2 {
@@ -285,20 +432,49 @@ body .is-layout-flex > * {
     background-repeat: no-repeat;
 }
 
-@media (min-width: 320px) and (max-width: 800px) {
-    .wp-container-2 {
-        background-position: 50% 0%; 
-    }
+@media (min-width: 656px) and (max-width: 800px) {
     .titre-nous-rencontrer {
         margin-top: 20px;
     }
 }
 
+@media (min-width: 508px) and (max-width: 656px) {
+    .wp-container-2 {
+        background-position-y: 15%; 
+    }
+}
+
+@media (min-width: 508px) and (max-width: 656px) {
+    .titre-nous-rencontrer {
+        margin-top: 120px!important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 508px) {
+    .titre-nous-rencontrer {
+        margin-top: 0px!important;
+    }
+    .wp-container-2 {
+        background: none;
+    }
+}
+
+.wp-image-93 {
+    object-fit: fill!important;
+}
+
 .wp-block-cover__inner-container .wp-container-8 .wp-container-7 {
     background-image: url("http://localhost/planty/wp-content/uploads/2023/06/Group-4.png");
-    background-position: 100% 100%;
+    background-position: 95% 100%;
     background-repeat: no-repeat;
-    min-height: 554px;
+    min-height: 385px;
+    gap: 155px;
+    justify-content: center;
+}
+
+.presentation-equipe .is-layout-flow {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 @media (min-width: 320px) and (max-width: 560px) {
@@ -311,14 +487,27 @@ body .is-layout-flex > * {
     cursor: pointer;
 }
 
-#submit-commande:hover {
+#submit-btn:focus {
+    text-decoration: none;
+}
+
+#submit-commande:hover, #submit-btn:hover {
     background-color: #C02E44;
     text-decoration: none;
 }
 
 #site-content .titre-l-equipe {
     margin-top: 120px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
+}
+
+#site-content .section-l-equipe h2 {
+    font-weight: 700;
+}
+
+.section-l-equipe .prenom-equipe {
+    margin-top: -19px!important;
+    margin-bottom: 6px!important;
 }
 
 .wp-container-6.wp-container-6 {
@@ -366,6 +555,7 @@ body .is-layout-flex > * {
     background-color: #E0B9B4;
     text-transform: none;
     font-size: 15px;
+    font-weight: 400;
     width: 198px;
     height: 55px;
     border-radius: 7px;
@@ -380,7 +570,7 @@ body .is-layout-flex > * {
 #wpcf7-f100-p15-o1 {
     z-index: -5;
     background-image: url("http://localhost/planty/wp-content/uploads/2023/06/Group-16.png");
-    background-position: 0% 97%;
+    background-position: left -5px top 460px; /*0% 97%*/
     background-repeat: no-repeat;
     max-width: 550px;
     margin-left: auto;
@@ -393,7 +583,7 @@ body .is-layout-flex > * {
     }
 }
 
-.wpcf7-form {
+.wpcf7-form, .wpcf7-form .failed {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -406,6 +596,19 @@ body .is-layout-flex > * {
     display: none;
 }
 
+.wpcf7 form.failed .wpcf7-response-output {
+	position: relative;
+	font-size: 18px;
+	padding: 5px;
+	border: none;
+	color: #dc3232;
+	font-weight: 600;
+	margin-left: auto;
+	margin-right: auto;
+    background-color: #ECE2DA;
+    border-radius: 5px;
+}
+
 /* PAGE PRECOMMANDE */
 
 .page-id-17 {
@@ -416,33 +619,65 @@ body .is-layout-flex > * {
     color:#ffffff;
 }
 
+.post-inner {
+    padding-top: 0!important;
+}
+
+.titre-page-commande {
+    margin-top: 69px!important;
+    margin-bottom: 69px!important;
+}
+
 .order-form {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    gap: 90px;
+    gap: 45px;
     margin-left: auto;
     margin-right: auto;
 }
+@media (min-width: 320px) and (max-width: 405px) {
+    #site-content .post-inner .entry-content .titre-page-commande {
+        font-size: 22px;
+    }
+}
 
-@media (min-width: 320px) and (max-width: 800px) {
+@media (min-width: 320px) and (max-width: 700px) {
+    .choix-gout #titre-commande {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 460px) {
+    .choix-gout #titre-commande {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 900px) {
     .order-form {
         display: flex;
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
         align-items: center;
-        gap: 20px
+        gap: 20px;
+        width: 100%;
     }
     #divider {
         display: none;
     }
     .left-column, .right-column {
-        width: 100%;
+        width: 100%!important;
         display: flex;
-        align-items: center;
-
+        flex-direction: column;
+        align-items: center!important;
+    }
+    .contenant-gouts {
+        flex-wrap: wrap; 
+    }
+    .choix-gout #titre-commande {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -450,6 +685,11 @@ body .is-layout-flex > * {
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: baseline;
+}
+
+#titre-livraison, #titre-informations {
+    margin: 53px 0 0 0!important;
 }
 
 #divider {
@@ -475,7 +715,7 @@ body .is-layout-flex > * {
 }
 
 #submit-commande {
-    margin: 44px auto 97px auto;
+    margin: 44px auto 0px auto;
 }
 
 .choix-gout {
@@ -483,14 +723,32 @@ body .is-layout-flex > * {
     padding-top: 40px;
     border-bottom: 1px solid #ffffff;
     padding-bottom: 40px;
-    margin-top: 40px;
+    margin: 0 auto 0 auto;
+    max-width: 860px;
 }
 
 /* FORMULAIRE DE COMMANDE */
 
+#site-content .titre-page-commande {
+    font-size: 38px;
+}
+
+#site-content #titre-commande {
+    font-weight: 700;
+}
+
+#wpcf7-f130-p17-o1 {
+    margin-bottom: 93px;
+}
+
+#titre-commande {
+    margin-top: 0;
+}
+
 .contenant-gouts {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -529,6 +787,8 @@ body .is-layout-flex > * {
     border-radius: 5px;
     color: #ffffff;
     cursor: pointer;
+    font-weight: 400;
+    font-family: 'Syne', sans-serif;
 }
 
 .form-zone .ok-btn:hover {
@@ -539,16 +799,18 @@ body .is-layout-flex > * {
 .number-zone input {
     border: none;
     border-radius: 5px 0 0 5px;
-    height: 54px;
+    height: 56px;
     font-size: 16px;
 }
 
 .button-zone .plus-btn, .button-zone .moins-btn {
     background-color: #DC9F96;
     color: #ffffff;
-    height: 28px;
+    height: 50%;
+    padding: 0;
     font-size: 20px;
     font-weight: 400;
+    font-family: 'Syne', sans-serif;
     cursor: pointer;
 }
 
@@ -566,5 +828,13 @@ body .is-layout-flex > * {
 }
 
 .button-zone .moins-btn:hover, .button-zone .plus-btn:hover {
+    text-decoration: none;
+}
+
+.button-zone .moins-btn:focus, .button-zone .plus-btn:focus, .form-zone .ok-btn:focus {
+    text-decoration: none;
+}
+
+#submit-commande:focus {
     text-decoration: none;
 }
