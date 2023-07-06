@@ -278,6 +278,11 @@ body .is-layout-flex > * {
 .section-gouts .column-gout .framboise {
     max-width: 240px!important;
 }
+
+.section-gouts .column-gout .txt-gout {
+    margin: 0!important;
+}
+
 @media (min-width: 320px) and (max-width: 860px) {
     #post-25 > div.post-inner > div > div.wp-block-columns.section-gouts.is-layout-flex.wp-container-3 {
         display: flex;
@@ -346,6 +351,7 @@ body .is-layout-flex > * {
 
 .section-gouts .wp-block-cover .wp-block-cover__inner-container {
     width: 350px;
+    padding: 0!important;
 }
 
 /* TESTIMONIAUX */
